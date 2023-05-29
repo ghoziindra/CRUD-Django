@@ -51,7 +51,7 @@ def edit_product(request):
             return HttpResponseRedirect('/')
 
 #Delete Product
-
-def delete_product(request):
-    if request.method == "POST":
-        product = Product.object.get(id = request.POST.get('id'))
+def delete_product(request, product_id):
+    product = Product.objects.get(id = product_id)
+    product.delete()
+    return HttpResponseRedirect('/')

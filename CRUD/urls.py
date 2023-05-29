@@ -14,5 +14,4 @@ urlpatterns = [
     path('edit_product', views.edit_product, name="edit_product"),
     #Delete Product
     path('delete_product/<str:product_id>', views.delete_product, name="delete_product"),
-
 ]
