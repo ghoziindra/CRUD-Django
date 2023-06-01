@@ -1,13 +1,22 @@
 {% extends 'base.html' %}
 
+<!----Title on tab browser---->
+{% block title %} Add Product {% endblock title %}
+
 <!--- Navbar content --->
 {% block navbar-content%}
-<i class="text-warning fas fa-pepper-hot"></i>&nbsp;&nbsp;Product List
+<i class="text-light fas fa-bars"></i>&nbsp;&nbsp;Add Product
 {% endblock navbar-content%}
 
 <!--- Page content --->
 {% block content %}
-<div>
-    
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card-body mt-5 {% block card-color %} border-dark text-light bg-secondary {% endblock card-color %}">
+                <span></span>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock content %}
