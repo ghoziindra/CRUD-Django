@@ -1,5 +1,5 @@
 /*---------------------------------------
-# START CONFIG STYLING
+# START STYLING
 ---------------------------------------*/
 html,
 body {
@@ -14,10 +14,6 @@ body {
 .wrapper {
     min-height: 100%;
     margin-bottom: -50px;
-}
-#footer,
-.push {
-    height: 50px;
 }
 /*---------------------------------------
 # THE OTHERS
