@@ -36,7 +36,12 @@
             <td>{{product.created_at | date:'m/d/Y (H:i)' }}</td>
             <td>
                 <a href="/product/{{ product.id }}" class="btn btn-warning" title="Edit Product">
-                   <i></i> 
+                   <i class="fas fa-pen"></i> 
+                </a>
+            </td>
+            <td>
+                <a href="/delete_product/{{ product.id }}" class="btn btn-secondary" title="Delete Product">
+                   <i class="fas fa-trash-alt"></i> 
                 </a>
             </td>
         </tr>
