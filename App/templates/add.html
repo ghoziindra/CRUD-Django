@@ -14,8 +14,38 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card-body mt-5 {% block card-color %} border-dark text-light bg-secondary {% endblock card-color %}">
-                <span></span>
+                <span class="text-center"> {% block card-title %} ENTER PRODUCT DATA {% endblock card-title %}</span>
             </div>
+
+            <!---- Form ---->
+            <form {% block action %} action="/add_product" {% endblock action %} method="POST" enctype="multipart/form-data" autocomplete="off" class="card p-3 border-dark mt-3">
+                {% csrf_token %}
+
+                <!----==== Block ID (denied here) ===---->
+                {% block value-id %}{% endblock value-id %}
+
+                <div class="input-group mb-3">
+                    <span class="side-label btn border-secondary bg-light"><i class="fas fa-bars"></i></span>
+                    <input type="text" class="form-control" name="product" maxlength="40" placeholder="Product Name" required {% block value-product %}{% endblock value-product %}>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="side-label btn border-secondary bg-light"><i class="fas fa-bars"></i></span>
+                    <input type="text" class="form-control" name="purchase" maxlength="40" placeholder="Price of buy" required {% block value-product %}{% endblock value-product %}>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="side-label btn border-secondary bg-light"><i class="fas fa-dollar-sign"></i></span>
+                    <input type="text" class="form-control" name="sale" maxlength="40" placeholder="Price of sell" required {% block value-product %}{% endblock value-product %}>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="side-label btn border-secondary bg-light"><i class="fas fa-bars"></i></span>
+                    <input type="text" class="form-control" name="product" maxlength="40" placeholder="Product Name" required {% block value-product %}{% endblock value-product %}>
+                </div>
+
+            </form>
+
         </div>
     </div>
 </div>
