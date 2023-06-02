@@ -1,0 +1,13 @@
+{% extends 'add.html' %}
+
+<!----Title on tab browser---->
+{% block title %} Edit Product {% endblock title %}
+
+<!--- Navbar content --->
+{% block navbar-content%}
+<i class="text-light fas fa-pen"></i>&nbsp;&nbsp;Add Product
+{% endblock navbar-content%}
+
+<!--- Block card color and title --->
+{% block card-color %} border-dark bg-warning {% endblock card-color %}
+{% block card-title %} <strong> Registered at: </strong> <span> {{product.created_at | date:'m/d/Y (H:i)' }} </span> {% endblock card-title %}

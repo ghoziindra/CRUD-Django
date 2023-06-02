@@ -1,7 +1,6 @@
-import imp
 from django.shortcuts import render, redirect
 from App.models import Product
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 
 #Home
 def home(request):
