@@ -11,3 +11,19 @@
 <!--- Block card color and title --->
 {% block card-color %} border-dark bg-warning {% endblock card-color %}
 {% block card-title %} <strong> Registered at: </strong> <span> {{product.created_at | date:'m/d/Y (H:i)' }} </span> {% endblock card-title %}
+
+<!-- Form Action -->
+{% block action %} action="/edit_product" {% endblock action %} 
+
+<!-- Button Action -->
+{% block btn-action %} <i class="fas fa-server"></i>&nbsp&nbsp; Save Changes {% endblock btn-action %}
+
+<!--======= <INPUT> =======-->
+
+{% block value-product %} value="{{ product.product }}" {% endblock value-product %}
+
+{% block value-purchase %} value="{{ product.purchase }}" {% endblock value-purchase %}
+
+{% block value-sale %} value="{{ product.sale }}" {% endblock value-sale %}
+
+{% block value-qty %} value="{{ product.qty }}" {% endblock value-qty %}
