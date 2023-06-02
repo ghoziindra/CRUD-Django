@@ -1,6 +1,7 @@
-from django.shortcuts import render
+import imp
+from django.shortcuts import render, redirect
 from App.models import Product
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 
 #Home
 def home(request):
@@ -24,9 +25,10 @@ def add_product(request):
             product.gender = request.POST.get('gender')
             product.note = request.POST.get('note')
             product.save()
-            return HttpResponseRedirect('/')
+            return redirect('/')
         else :
             return render(request, 'add.html')
+
 
 
 #View Product Individually
