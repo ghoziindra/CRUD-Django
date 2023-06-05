@@ -25,7 +25,7 @@
                 {% block value-id %}{% endblock value-id %}
 
                 <div class="input-group mb-3">
-                    <span class="side-label btn border-secondary bg-light"><i class="fas fa-shopping-basket"></i></span>
+                    <span class="side-label btn border-secondary bg-light"><i class="fas fa-store"></i></span>
                     <input type="text" class="form-control" name="product" maxlength="40" placeholder="Product Name" required {% block value-product %}{% endblock value-product %}>
                 </div>
 
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="input-group mb-3">
-                    <span class="side-label btn border-secondary bg-light"><i class="fas fa-buffer"></i></span>
+                    <span class="side-label btn border-secondary bg-light"><i class="fas fa-cart-plus"></i></span>
                     <input type="text" class="form-control" name="qty" maxlength="10" placeholder="Quantity" required {% block value-qty %}{% endblock value-qty %}>
                 </div>
 
@@ -61,9 +61,9 @@
                     <textarea class="form-control" name="note" rows="7" placeholder="Description">{% block note %}{% endblock note %}</textarea>
                 </div>
 
-                <div class="mt-4" style="width: 100px;">
+                <div class="mt-3" style="width: 100px;">
                     <button type="submit" class="btn btn-secondary mb-3">
-                    {% block btn-action %}<i class="fas fa-plus"></i>&nbsp;&nbsp; Add Product {% endblock btn-action %}
+                    {% block btn-action %}<i class="fas fa-plus-square"></i>&nbsp;&nbsp; Add Product {% endblock btn-action %}
                     </button>
                     <a href= "{% url 'home' %}" class="btn btn-outline-dark mb-3 ms-2" style="width: 50px;" title="Back">
                         <i class="fas fa-chevron-left"></i>
