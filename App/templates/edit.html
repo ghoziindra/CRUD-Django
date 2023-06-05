@@ -19,11 +19,24 @@
 {% block btn-action %} <i class="fas fa-server"></i>&nbsp&nbsp; Save Changes {% endblock btn-action %}
 
 <!--======= <INPUT> =======-->
-
+<!--- ID --->
+    {% block value-id %}
+<div class="input-group mb-3">
+    <span class="side-label btn border-secondary bg-light"><i class="fas fa-shopping-key"></i></span>
+    <input type="text" class="form-control" name="id" value="{{ product.id }}" readonly>
+</div>
+{% endblock value-id %}
+<!--- product --->
 {% block value-product %} value="{{ product.product }}" {% endblock value-product %}
-
+<!--- purchase --->
 {% block value-purchase %} value="{{ product.purchase }}" {% endblock value-purchase %}
-
+<!--- sale --->
 {% block value-sale %} value="{{ product.sale }}" {% endblock value-sale %}
-
+<!--- qty --->
 {% block value-qty %} value="{{ product.qty }}" {% endblock value-qty %}
+<!--- gender --->
+{% block option %}
+<option style="background-color: aliceblue; color: #111;">{{ product.gender }}</option>
+{% endblock option %}
+<!--- note --->
+{% block note%}{{ product.note }}{% endblock note %}

@@ -7,7 +7,7 @@ def home(request):
     all_product = Product.objects.all().order_by('-created_at')
     return render(request, 'home.html', {"products": all_product})
 
-#Add Product
+# Add Product
 def add_product(request):
     if request.method == "POST":
         if request.POST.get('product') \
@@ -25,9 +25,10 @@ def add_product(request):
             product.note = request.POST.get('note')
             product.save()
             return redirect('/')
-        else :
+        else:
             return render(request, 'add.html')
 
+    return render(request, 'add.html')
 
 
 #View Product Individually
